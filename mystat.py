@@ -7,7 +7,7 @@ def avg(MR, sig, samples, volumes):
     #errMR=[]
     #errsig=[]
     
-    df=pd.DataFrame({'ID': samples, 'MR':MR, 'sig':sig, 'vol':volumes})
+    df=pd.DataFrame({'ID':samples, 'MR':MR, 'sig':sig, 'vol':volumes})
     
     avgMR=df.groupby(['ID'])['MR'].mean()
     avgsig=df.groupby(['ID'])['sig'].mean()
